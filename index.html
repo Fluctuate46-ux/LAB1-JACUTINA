@@ -1,13 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Webpage</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to My Dynamic Page</h1>
-    <p id="message">This is the base HTML content.</p>
-    <button id="btn">Click Me</button>
+
+  <div class="container">
+    <header>
+      <strong>My Portfolio</strong>
+      <button class="theme-toggle" id="themeBtn">🌙 Dark Mode</button>
+    </header>
+
+    <section class="hero">
+      <div class="avatar">ME</div>
+      <h1>Jerick James Jacutina</h1>
+      <p class="subtitle">Full-Stack Developer & Designer</p>
+    </section>
+
+    <nav class="nav-tabs">
+      <button class="tab-btn active" data-tab="about">About</button>
+      <button class="tab-btn" data-tab="skills">Skills</button>
+      <button class="tab-btn" data-tab="experience">Experience</button>
+      <button class="tab-btn" data-tab="contact">Contact</button>
+    </nav>
+
+    <div id="about" class="tab-content active">
+      <h2>About Me</h2>
+      <p class="tab-paragraph">
+        Hello! I'm a passionate creator who loves building clean, accessible, and functional web applications. 
+        I enjoy turning complex problems into simple, beautiful, and intuitive designs.
+      </p>
+    </div>
+
+    <div id="skills" class="tab-content">
+      <h2>Technical Skills</h2>
+      <div class="skills-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="dev">Development</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+      </div>
+      <div id="skills-list">
+        <span class="skill-tag" data-cat="dev">JavaScript</span>
+        <span class="skill-tag" data-cat="dev">HTML/CSS</span>
+        <span class="skill-tag" data-cat="dev">React</span>
+        <span class="skill-tag" data-cat="design">Figma</span>
+        <span class="skill-tag" data-cat="design">UI/UX</span>
+        <span class="skill-tag" data-cat="dev">Git</span>
+      </div>
+    </div>
+
+    <div id="experience" class="tab-content">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Senior Role — DXC Technology PH</h3>
+          <small class="text-muted">2024 - Present</small>
+          <p>Leading web development efforts and redesigning core product features.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Junior Role — Infor</h3>
+          <small class="text-muted">2022 - 2024</small>
+          <p>Collaborated with cross-functional teams to build responsive frontend interfaces.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" class="tab-content">
+      <h2>Get In Touch</h2>
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
