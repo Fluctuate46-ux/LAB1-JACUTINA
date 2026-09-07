@@ -15,10 +15,26 @@ git branch -M   main
 git add index.html
 git commit -m "Add baseline HTML only"
 
+save to the no-style branch
 git branch no-style
 
+checking which file I am currently at
 git branch
 
+move to main 
 git checkout main
 
+prepare for commit
+git add .
+
+save changes locally
 git commit
+
+authenticate to use my username for push
+git remote set-url origin https://Fluctuate46-ux@github.com/Fluctuate46-ux/LAB1-JACUTINA.git
+
+push main 
+git push -u origin main
+
+push branch to github
+git push origin no-style
